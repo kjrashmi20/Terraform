@@ -10,7 +10,6 @@ Production-grade Terraform project demonstrating:
  Architecture
 - VPC, EC2
 - S3 backend for Terraform state
-- CloudTrail + EventBridge + Lambda for anomaly detection
 
 Features
 - Modular Terraform design
