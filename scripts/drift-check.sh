@@ -9,9 +9,9 @@ terraform plan -detailed-exitcode -out=tfplan
 exit_code=$?
 
 if [ $exit_code -eq 0 ]; then
-    echo "✅ No drift detected"
+    echo "No drift detected"
 elif [ $exit_code -eq 2 ]; then
-    echo "⚠️ Drift detected!"
+    echo "Drift detected!"
 
     terraform show -json tfplan > plan.json
 
@@ -20,6 +20,6 @@ elif [ $exit_code -eq 2 ]; then
 
     exit 2
 else
-    echo "❌ Terraform error"
+    echo "Terraform error"
     exit 1
 fi
