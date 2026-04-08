@@ -16,3 +16,8 @@ module "ec2" {
   subnet_id = module.vpc.public_subnet_id
   vpc_id    = module.vpc.vpc_id
 }
+module "event_lambda" {
+  source = "../../modules/event_lambda"
+
+  filename = "../../../lambda/function.zip"
+}
